@@ -20,12 +20,12 @@ features_to_keep = ['GP', 'MIN', 'PTS', 'FTM', 'REB', 'TOV', 'STL', 'BLK', 'FG%'
 
 #### Model Selection and Initial Testing
 
-We began by testing five different models to assess which ones would handle our data the best. The models were chosen based on their ability to manage imbalanced data, their flexibility in handling missing values, and their performance with various types of input data:
-1. **Logistic Regression** – a strong baseline for binary classification tasks.
-2. **Random Forest** – known for its flexibility and good performance on tabular data.
-3. **Balanced Random Forest** – specifically designed for handling imbalanced data.
-4. **Gradient Boosting** – known for its accuracy and handling of complex relationships.
-5. **Support Vector Machine (SVM)** – effective in high-dimensional spaces.
+We began by testing five different models to assess which ones would handle our data most effectively. The models were chosen based on their ability to manage imbalanced data, handle missing values, and their suitability for tabular datasets:
+1. **Logistic Regression** –a reliable baseline for binary classification tasks that provides interpretability and handles both balanced and imbalanced datasets reasonably well.
+2. **Gradient Boosting** – known for its accuracy, it builds models sequentially, making it great for capturing complex patterns and relationships in the data.
+3. **XGBoost** – a powerful and flexible gradient boosting algorithm that offers high performance on tabular data, particularly suited for datasets with mixed feature types.
+4. **Balanced Random Forest** – an extension of the Random Forest algorithm designed specifically to address imbalanced data by balancing the class distribution when sampling from the data.
+5. **Easy Ensemble** – a robust method for imbalanced classification that creates multiple balanced subsets of the data and trains a model on each subset, effectively improving performance for imbalanced datasets by combining results from multiple classifiers.
 
 The first stage of testing these models involved using default parameters and evaluating them through cross-validation. We paid special attention to how each model handled the slight imbalance and missing values in the dataset.
 
